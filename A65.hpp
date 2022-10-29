@@ -4,8 +4,22 @@
 #include <iostream>
 using namespace std;
 
-// complete two functions
-// swap() ; to swap all three values like (a, b, c) to (c, a, b)
-//              This function will use swaptwo().
+void getinput(int &, int &, int &);
+void swap(int &, int &);
+void swap(int &, int &, int &);
 
-// swaptwo() ; to swap two values (a, b) to (b, a)
+void getinput(int &num1, int &num2, int &num3) {
+    cin >> num1 >> num2 >> num3;
+}
+
+void swap(int &num1, int &num2) {
+    int temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+}
+
+void swap(int &num1, int &num2, int &num3) {
+    swap(num2, num3);
+    swap(num1, num2);
+}
